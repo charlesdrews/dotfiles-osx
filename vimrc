@@ -12,7 +12,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " YouCompleteMe (https://github.com/Valloric/YouCompleteMe)
-"Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 
 " Solarized (https://github.com/altercation/vim-colors-solarized)
 Plugin 'altercation/vim-colors-solarized'

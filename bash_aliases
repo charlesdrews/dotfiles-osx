@@ -6,7 +6,7 @@ alias mv='mv -i'
 # preferred ls usage & combine it with cd using "ca"
 alias ls='ls -G'
 alias la='ls -ACFG'
-alias ll='ls -AlFhtG'
+alias ll='ls -AlFhG'
 function ca() {
 	if [ -n "$1" ]
 	then
