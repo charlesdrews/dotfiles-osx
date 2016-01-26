@@ -15,6 +15,7 @@ export GIT_PS1_SHOWUPSTREAM="auto"	# ahead/behind upstream >/<
 #             colors per the Solarized scheme)
 blue='\[\033[34m\]'
 red='\[\033[31m\]'
+base01='\[\033[92m\]'
 resetColor='\[\033[0m\]'
 
 # set PROMPT_COMMAND (in lieu of PS1 to get colors from __git_ps1)
@@ -23,7 +24,8 @@ if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_CONNECTION" ] || \
 	[ -n "$SSH_TTY" ]; then
 	pre+="$red\u@\h:"
 fi
-pre+="$blue\W$resetColor"
+#pre+="$blue\W$resetColor"
+pre+="$base01\W$resetColor"
 #post="\\\$$resetColor "
 post="➤$resetColor "
 format="(%s)"

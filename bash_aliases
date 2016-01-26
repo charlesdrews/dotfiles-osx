@@ -25,6 +25,15 @@ function cl() {
 	fi
 }
 
+# git aliases
+alias gs='git status '
+alias ga='git add '
+alias gb='git branch '
+alias gc='git commit'
+alias gd='git diff'
+alias go='git checkout '
+alias gh='git hist ' # hist is an alias in .gitconfig
+
 # tmux aliases
 # The terminal is using 16 colors to properly use the Solarized theme.
 # In order to make tmux use the solarized colors, need to use a workaround
