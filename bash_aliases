@@ -61,7 +61,7 @@ function tk() {
 }
 
 # PostgreSQL alias
-alias postgresql='/Library/PostgreSQL/9.5/scripts/runpsql.sh'
+alias psql='/Applications/PostgreSQL 9.5/SQL Shell (psql).app/Contents/MacOS/applet'
 
 # function to use bc quickly
 function =() {
