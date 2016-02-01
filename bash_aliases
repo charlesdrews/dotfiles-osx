@@ -60,9 +60,6 @@ function tk() {
 	fi
 }
 
-# PostgreSQL alias
-alias psql='/Applications/PostgreSQL 9.5/SQL Shell (psql).app/Contents/MacOS/applet'
-
 # function to use bc quickly
 function =() {
 	if [ -n "$1" ]
