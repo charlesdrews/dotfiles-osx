@@ -60,6 +60,9 @@ function tk() {
 	fi
 }
 
+# PostgreSQL alias
+alias postgresql='/Library/PostgreSQL/9.5/scripts/runpsql.sh'
+
 # function to use bc quickly
 function =() {
 	if [ -n "$1" ]
