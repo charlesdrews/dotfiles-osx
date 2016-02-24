@@ -31,7 +31,13 @@ post="➤$resetColor "
 format="(%s)"
 PROMPT_COMMAND='__git_ps1 "$pre" "$post" "$format"'
 
-# make sure /usr/local/bin is in PATH
+# use vim as default editor
+export EDITOR=/usr/local/bin/vim
+
+# enable menu-complete (cycle through options by hitting tab)
+[[ $- = *i* ]] && bind TAB:menu-complete
+
+# add /usr/local/bin is in PATH
 export PATH=/usr/local/bin:$PATH
 
 # add my Scripts directory in Dropbox to PATH
@@ -40,8 +46,6 @@ export PATH=~/Dropbox/Charlie/Scripts:$PATH
 # add PostgreSQL to PATH
 export PATH=/Library/PostgreSQL/9.5/bin:$PATH
 
-# use vim as default editor
-export EDITOR=/usr/local/bin/vim
-
-# enable menu-complete (cycle through options by hitting tab)
-[[ $- = *i* ]] && bind TAB:menu-complete
+# add tldr to PATH
+# https://github.com/raylee/tldr
+export PATH=~/bin:$PATH
