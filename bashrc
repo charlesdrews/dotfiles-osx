@@ -46,6 +46,9 @@ export PATH=~/Dropbox/Charlie/Scripts:$PATH
 # add PostgreSQL to PATH
 export PATH=/Library/PostgreSQL/9.5/bin:$PATH
 
+# add Anaconda to PATH
+export PATH="/Users/charlie/anaconda/bin:$PATH"
+
 # add tldr to PATH
 # https://github.com/raylee/tldr
 export PATH=~/bin:$PATH
