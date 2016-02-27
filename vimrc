@@ -48,6 +48,8 @@ let g:ycm_global_extra_conf = '~/.ycm_extra_conf.py'
 " Control preview window behavior with YouCompleteMe
 " let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
+" make sure ycm is using system vim, not Anaconda vim
+let g:ycm_path_to_python_interpreter = '/usr/bin/python'
 
 "set nocompatible	   " don't use vi compatible mode (in Vundle config above)
 set number             " turn on line numbers
