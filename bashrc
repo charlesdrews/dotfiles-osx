@@ -5,11 +5,11 @@ fi
 # enable git auto-completion & bash prompt integration
 source ~/.git-completion.bash
 source ~/.git-prompt.sh
-export GIT_PS1_SHOWDIRTYSTATE=1		# show unstaged/uncommited */+
-export GIT_PS1_SHOWSTASHSTATE=1		# show stashed $
-export GIT_PS1_SHOWUNTRACKEDFILES=1	# show untracked %
-export GIT_PS1_SHOWCOLORHINTS=1		# colorize
-export GIT_PS1_SHOWUPSTREAM="auto"	# ahead/behind upstream >/<
+export GIT_PS1_SHOWDIRTYSTATE=1			# show unstaged/uncommited */+
+export GIT_PS1_SHOWSTASHSTATE=1			# show stashed $
+export GIT_PS1_SHOWUNTRACKEDFILES=1		# show untracked %
+export GIT_PS1_SHOWCOLORHINTS=1			# colorize
+export GIT_PS1_SHOWUPSTREAM="verbose"	# ahead/behind upstream >/<
 
 # set colors (see "colors" in bash_aliases to display the available
 #             colors per the Solarized scheme)
@@ -37,18 +37,9 @@ export EDITOR=/usr/local/bin/vim
 # enable menu-complete (cycle through options by hitting tab)
 [[ $- = *i* ]] && bind TAB:menu-complete
 
-# add /usr/local/bin is in PATH
-export PATH=/usr/local/bin:$PATH
-
-# add my Scripts directory in Dropbox to PATH
-export PATH=~/Dropbox/Charlie/Scripts:$PATH
-
-# add PostgreSQL to PATH
+# add directories to PATH
+export PATH=~/bin:$PATH #https://github.com/raylee/tldr
 export PATH=/Library/PostgreSQL/9.5/bin:$PATH
-
-# add Anaconda to PATH
-export PATH="/Users/charlie/anaconda/bin:$PATH"
-
-# add tldr to PATH
-# https://github.com/raylee/tldr
-export PATH=~/bin:$PATH
+export PATH=~/anaconda/bin:$PATH
+export PATH=~/Dropbox/Charlie/Scripts:$PATH
+export PATH=/usr/local/bin:$PATH

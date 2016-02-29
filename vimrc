@@ -20,6 +20,9 @@ Plugin 'altercation/vim-colors-solarized'
 " Auto Pairs (https://github.com/jiangmiao/auto-pairs)
 Plugin 'Auto-Pairs'
 
+" jedi-vim (https://github.com/davidhalter/jedi-vim)
+Plugin 'davidhalter/jedi-vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
