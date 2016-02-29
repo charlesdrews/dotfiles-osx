@@ -5,11 +5,11 @@ fi
 # enable git auto-completion & bash prompt integration
 source ~/.git-completion.bash
 source ~/.git-prompt.sh
-export GIT_PS1_SHOWDIRTYSTATE=1			# show unstaged/uncommited */+
-export GIT_PS1_SHOWSTASHSTATE=1			# show stashed $
-export GIT_PS1_SHOWUNTRACKEDFILES=1		# show untracked %
-export GIT_PS1_SHOWCOLORHINTS=1			# colorize
-export GIT_PS1_SHOWUPSTREAM="verbose"	# ahead/behind upstream >/<
+export GIT_PS1_SHOWDIRTYSTATE=1		# show unstaged/uncommited */+
+export GIT_PS1_SHOWSTASHSTATE=1		# show stashed $
+export GIT_PS1_SHOWUNTRACKEDFILES=1	# show untracked %
+export GIT_PS1_SHOWCOLORHINTS=1		# colorize
+export GIT_PS1_SHOWUPSTREAM="auto"	# ahead/behind upstream >/<
 
 # set colors (see "colors" in bash_aliases to display the available
 #             colors per the Solarized scheme)
