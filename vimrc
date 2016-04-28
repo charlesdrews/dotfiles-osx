@@ -47,7 +47,7 @@ set background=dark
 colorscheme solarized
 
 " Specify the C-family compilation flags for YouCompleteMe
-let g:ycm_global_extra_conf = '~/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 " Control preview window behavior with YouCompleteMe
 " let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
@@ -91,3 +91,8 @@ digraph >> 10217 " right angle bracket U+27E9 = 10217
 digraph ln 172   " logical negation sign U+00AC = 172
 digraph la 8743  " logical and/conjunction U+2227 = 8743
 digraph lo 8744  " logical or/disjunction U+2228 = 8744
+
+
+
+let g:ycm_server_use_vim_stdout = 1
+let g:ycm_server_log_level = 'debug'
