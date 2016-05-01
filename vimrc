@@ -23,9 +23,6 @@ Plugin 'Auto-Pairs'
 " jedi-vim (https://github.com/davidhalter/jedi-vim)
 Plugin 'davidhalter/jedi-vim'
 
-" Vim Markdown Preview (https://github.com/JamshedVesuna/vim-markdown-preview)
-Plugin 'JamshedVesuna/vim-markdown-preview'
-
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
