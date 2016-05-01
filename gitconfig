@@ -3,8 +3,8 @@
 	email = charlesdrews@gmail.com
 [core]
 	editor = vim
-	excludesfile = /Users/charlie/.gitignore
-	excludes = /Users/charlie/.gitignore
+	excludesfile = /Users/charlie/.gitignore_global
+	excludes = /Users/charlie/.gitignore_global
 [merge]
 	tool = vimdiff
 [filter "media"]
