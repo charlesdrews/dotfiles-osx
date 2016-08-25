@@ -43,3 +43,4 @@ export PATH=/Library/PostgreSQL/9.5/bin:$PATH
 export PATH=~/anaconda/bin:$PATH
 export PATH=~/Dropbox/Charlie/Scripts:$PATH
 export PATH=/usr/local/bin:$PATH
+export PATH='/Applications/Android Studio.app/Contents/MacOS':$PATH
