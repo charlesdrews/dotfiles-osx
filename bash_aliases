@@ -72,4 +72,7 @@ function =() {
 alias colors='printf "\e[%dm%d dark\e[0m  \e[%d;1m%d bold\e[0m\n" {30..37}{,,,}'
 
 # open files with Sublime Text from command line
-alias sublime='open -a "Sublime Text"'
+alias sublime='open -a /Applications/Sublime\ Text.app/'
+
+# open projects with Android Studio from command line
+alias androidstudio='open -a /Applications/Android\ Studio.app/'
