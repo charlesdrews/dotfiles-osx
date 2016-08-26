@@ -76,3 +76,6 @@ alias sublime='open -a /Applications/Sublime\ Text.app/'
 
 # open projects with Android Studio from command line
 alias androidstudio='open -a /Applications/Android\ Studio.app/'
+
+# open projects with IntelliJ from command line
+alias intellij='open -a /Applications/IntelliJ\ IDEA\ CE.app/'
