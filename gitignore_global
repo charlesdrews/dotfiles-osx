@@ -37,7 +37,8 @@ proguard/
 captures/
 
 # Intellij
-*.iml
+# *.iml
+# For GA, don't ignore .iml files, otherwise students can't open projects in IntelliJ
 
 # Keystore files
 *.jks
