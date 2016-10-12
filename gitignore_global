@@ -212,7 +212,8 @@ crashlytics-build.properties
 fabric.properties
 
 ### Intellij Patch ###
-*.iml
+# *.iml
+# For GA, don't ignore .iml files, otherwise students can't open projects in IntelliJ
 
 
 ### IPythonNotebook ###
