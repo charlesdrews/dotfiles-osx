@@ -32,7 +32,8 @@ alias gb='git branch '
 alias gc='git commit'
 alias gd='git diff'
 alias go='git checkout '
-alias gh='git hist ' # hist is an alias in .gitconfig
+alias gl='git hist ' # hist is an alias in .gitconfig for git log
+alias gls='git ls-files'
 
 # tmux aliases
 # The terminal is using 16 colors to properly use the Solarized theme.
