@@ -46,14 +46,6 @@ syntax enable
 set background=dark
 colorscheme solarized
 
-" Specify the C-family compilation flags for YouCompleteMe
-let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
-" Control preview window behavior with YouCompleteMe
-" let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_autoclose_preview_window_after_insertion = 1
-" make sure ycm is using system vim, not Anaconda vim
-let g:ycm_path_to_python_interpreter = '/usr/bin/python'
-
 "set nocompatible	   " don't use vi compatible mode (in Vundle config above)
 set number             " turn on line numbers
 set ruler              " show line & column #s in statusline
@@ -66,6 +58,17 @@ set incsearch          " highlight next match while typing pattern
 nnoremap <silent> <C-l> :nohlsearch<CR><C-l> " use Ctrl-l to mute hl
 
 set backspace=indent,eol,start	"allow backspace over anything in insert mode
+
+set spell spelllang=en_us " turn on spell check & change color
+" http://vimdoc.sourceforge.net/htmldoc/syntax.html#hl-SpellBad
+highlight clear SpellBad	" word not recognized by spellchecker
+highlight SpellBad cterm=underline ctermfg=DarkRed
+highlight clear SpellCap	" word that should be capitalized
+highlight SpellCap cterm=underline
+highlight clear SpellLocal	" word from other region
+highlight SpellLocal cterm=underline
+highlight clear SpellRare	" word that is rarely used
+highlight SpellRare cterm=underline
 
 " enable filetype detection, plugins, & indenting
 "	-defaults are in /usr/share/vim/vim73/
@@ -92,7 +95,14 @@ digraph ln 172   " logical negation sign U+00AC = 172
 digraph la 8743  " logical and/conjunction U+2227 = 8743
 digraph lo 8744  " logical or/disjunction U+2228 = 8744
 
-
-
+" Specify the C-family compilation flags for YouCompleteMe
+let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
+" Control preview window behavior with YouCompleteMe
+" let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_autoclose_preview_window_after_insertion = 1
+" make sure ycm is using system vim, not Anaconda vim
+let g:ycm_path_to_python_interpreter = '/usr/bin/python'
 let g:ycm_server_use_vim_stdout = 1
 let g:ycm_server_log_level = 'debug'
+" clear ycm's default blacklist so it runs on all filetypes
+let g:ycm_filetype_blacklist = {}

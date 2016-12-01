@@ -37,9 +37,8 @@ export EDITOR=/usr/local/bin/vim
 # enable menu-complete (cycle through options by hitting tab)
 [[ $- = *i* ]] && bind TAB:menu-complete
 
-# add directories to PATH
-export PATH=~/bin:$PATH #https://github.com/raylee/tldr
-export PATH=/Library/PostgreSQL/9.5/bin:$PATH
-export PATH=~/anaconda/bin:$PATH
-export PATH=~/Dropbox/Charlie/Scripts:$PATH
-export PATH=/usr/local/bin:$PATH
+# add directories to the end of PATH
+export PATH=$PATH:~/Dropbox/Charlie/Scripts
+export PATH=$PATH:~/bin #https://github.com/raylee/tldr
+export PATH=$PATH:/Library/PostgreSQL/9.5/bin
+export PATH=$PATH:~/anaconda/bin
