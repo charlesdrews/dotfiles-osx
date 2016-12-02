@@ -1,3 +1,3 @@
 # dotfiles-osx
 
-symlink everything to $HOME
+symlink everything to $HOME w/ "."
