@@ -7,9 +7,9 @@ alias mv='mv -i'
 alias path='echo $PATH | tr ":" "\n"'
 
 # preferred ls usage & combine it with cd using "ca"
-alias ls='ls -G'
-alias la='ls -ACFG'
-alias ll='ls -AlFhG'
+alias ls='gls --color=auto'
+alias la='gls -ACF --color=auto'
+alias ll='gls -AlFh --color=auto'
 function ca() {
 	if [ -n "$1" ]
 	then
@@ -36,7 +36,7 @@ alias gc='git commit'
 alias gd='git diff'
 alias go='git checkout '
 alias gl='git hist ' # hist is an alias in .gitconfig for git log
-alias gls='git ls-files'
+alias gitls='git ls-files'
 
 # tmux aliases
 # The terminal is using 16 colors to properly use the Solarized theme.

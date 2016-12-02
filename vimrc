@@ -77,7 +77,7 @@ highlight SpellRare cterm=underline
 set shiftwidth=4
 set tabstop=4
 set softtabstop=4
-set noexpandtab
+set expandtab
 
 " Set digraphs for easy use of certain non-ascii characters
 "	convert the unicode hex values to decimal
