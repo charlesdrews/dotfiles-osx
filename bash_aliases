@@ -3,6 +3,9 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 
+# quickly check PATH variable
+alias path='echo $PATH | tr ":" "\n"'
+
 # preferred ls usage & combine it with cd using "ca"
 alias ls='ls -G'
 alias la='ls -ACFG'

@@ -11,17 +11,14 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-" YouCompleteMe (https://github.com/Valloric/YouCompleteMe)
-Plugin 'Valloric/YouCompleteMe'
-
-" Solarized (https://github.com/altercation/vim-colors-solarized)
+" https://github.com/vim-scripts
 Plugin 'altercation/vim-colors-solarized'
-
-" Auto Pairs (https://github.com/jiangmiao/auto-pairs)
-Plugin 'Auto-Pairs'
-
-" jedi-vim (https://github.com/davidhalter/jedi-vim)
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'davidhalter/jedi-vim'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-commentary'
+Plugin 'suan/vim-instant-markdown'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -46,21 +43,22 @@ syntax enable
 set background=dark
 colorscheme solarized
 
-"set nocompatible	   " don't use vi compatible mode (in Vundle config above)
+" Misc. options
 set number             " turn on line numbers
 set ruler              " show line & column #s in statusline
+set colorcolumn=72,79  " visual reminder to avoid overlong lines
 set visualbell         " flash screen rather than sound beep
 set pastetoggle=<F12>  " paste from other apps w/o indent problems
-set colorcolumn=72,79  " visual reminder to avoid overlong lines
+set backspace=indent,eol,start	"allow backspace over anything in insert mode
+set scrolloff=1
 
+" Search options
 set hlsearch           " highlight search results
 set incsearch          " highlight next match while typing pattern
 nnoremap <silent> <C-l> :nohlsearch<CR><C-l> " use Ctrl-l to mute hl
 
-set backspace=indent,eol,start	"allow backspace over anything in insert mode
-
+" Spell check preferences
 set spell spelllang=en_us " turn on spell check & change color
-" http://vimdoc.sourceforge.net/htmldoc/syntax.html#hl-SpellBad
 highlight clear SpellBad	" word not recognized by spellchecker
 highlight SpellBad cterm=underline ctermfg=DarkRed
 highlight clear SpellCap	" word that should be capitalized
@@ -70,7 +68,7 @@ highlight SpellLocal cterm=underline
 highlight clear SpellRare	" word that is rarely used
 highlight SpellRare cterm=underline
 
-" enable filetype detection, plugins, & indenting
+" Enable filetype detection, plugins, & indenting
 "	-defaults are in /usr/share/vim/vim73/
 "		& /usr/share/vim/vim73/indent/
 "	-my overrides in ~/.vim/after/ftplugin/)
@@ -81,7 +79,7 @@ set tabstop=4
 set softtabstop=4
 set noexpandtab
 
-" set digraphs for easy use of certain non-ascii characters
+" Set digraphs for easy use of certain non-ascii characters
 "	convert the unicode hex values to decimal
 digraph pp 182   " paragraph sign: U+00B6 = 182
 digraph u> 8593  " up arrow: U+2191 = 8593
