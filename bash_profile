@@ -5,12 +5,6 @@ then
 	source $HOME/.profile
 fi
 
-# if interactive session...
-# if [[ $- = *i*  ]]
-# then
-
-# fi
-
 # aliases, menu-complete, PROMPT_COMMAND set in .bashrc
 if [ -f $HOME/.bashrc ]
 then
