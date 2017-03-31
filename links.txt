@@ -1,0 +1,13 @@
+https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh
+
+https://tmux.github.io/
+https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard/
+
+https://www.iterm2.com/
+https://github.com/altercation/solarized/tree/master/iterm2-colors-solarized
+
+https://github.com/seebi/dircolors-solarized
+
+https://github.com/macvim-dev/macvim/releases
+https://github.com/VundleVim/Vundle.vim
+https://github.com/Valloric/YouCompleteMe
