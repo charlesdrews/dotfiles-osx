@@ -18,7 +18,8 @@ Plugin 'davidhalter/jedi-vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
-Plugin 'suan/vim-instant-markdown'
+" Plugin 'suan/vim-instant-markdown'
+Plugin 'JamshedVesuna/vim-markdown-preview'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -94,13 +95,20 @@ digraph la 8743  " logical and/conjunction U+2227 = 8743
 digraph lo 8744  " logical or/disjunction U+2228 = 8744
 
 " Specify the C-family compilation flags for YouCompleteMe
-let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf='~/.ycm_extra_conf.py'
 " Control preview window behavior with YouCompleteMe
 " let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_autoclose_preview_window_after_insertion=1
 " make sure ycm is using system vim, not Anaconda vim
-let g:ycm_path_to_python_interpreter = '/usr/bin/python'
-let g:ycm_server_use_vim_stdout = 1
-let g:ycm_server_log_level = 'debug'
+let g:ycm_path_to_python_interpreter='/usr/bin/python'
+let g:ycm_server_use_vim_stdout=1
+let g:ycm_server_log_level='debug'
 " clear ycm's default blacklist so it runs on all filetypes
-let g:ycm_filetype_blacklist = {}
+let g:ycm_filetype_blacklist={}
+
+" Configure vim-markdown-preview to use grip
+" https://github.com/JamshedVesuna/vim-markdown-preview#options
+let vim_markdown_preview_toggle=2
+let vim_markdown_preview_browser='Google Chrome'
+let vim_markdown_preview_temp_file=1
+let vim_markdown_preview_github=1
