@@ -1,6 +1,6 @@
 # dotfiles-osx
 
-- Run `xcode-select --all` to install xcode cmd line tools
+- Run `xcode-select --install` to install xcode cmd line tools
 - Set up [homebrew](https://docs.brew.sh/Installation.html), then install:
   - `coreutils`
   - `libevent`
