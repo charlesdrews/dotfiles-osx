@@ -8,6 +8,7 @@
   - `cmake`
   - `--with-toolchain llvm`
   - `reattach-to-user-namespace`
+- Copy .git-prompt.sh to $HOME from https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh
 - Symlink to these config files from $HOME
   - Prepend names w/ "."
 - Set up vim
