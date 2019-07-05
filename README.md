@@ -22,21 +22,19 @@ Also, don't forget to...
 - Map caps lock to ctrl
 - Change iterm2 theme to solarized dark (same for vscode)
 - Update vscode:
-  - Add extensions:
+  - Add extensions: Vim, TSLint, markdownlin, jshint, ESLint, TSLint, Beautify, and Salesforce extensions
   - Update settings.json to include:
-```json
-{
+    ```json
+    {
     "workbench.colorTheme": "Solarized Dark",
 
-      "editor.rulers": [
+    "editor.rulers": [
         80,
         100
-    
-      ],
+    ],
 
     "editor.minimap.enabled": false,
     "editor.renderWhitespace": "none",
     "workbench.sideBar.location": "left",
-
 }
 ```
