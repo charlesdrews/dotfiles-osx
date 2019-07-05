@@ -1,0 +1,132 @@
+# use Ctrl-a as prefix rather than Ctrl-b
+unbind C-b
+set -g prefix C-a
+bind C-a send-prefix # hit Ctrl-a twice to send Ctrl-a to an app
+
+# reduce default delay
+set -s escape-time 1
+
+# shortcut to reload .tmux.conf
+bind r source-file ~/.tmux.conf \; display ".tmux.conf reloaded"
+
+# set window & pane creation hotkeys & maintain current path
+bind c new-window -c '#{pane_current_path}'
+bind | split-window -hc '#{pane_current_path}'
+bind - split-window -vc '#{pane_current_path}'
+
+# improve pane navigation & resizing
+#   -r makes it repeatable w/in
+#   500ms default repeat limit
+bind -r h select-pane -L \; display-pane
+bind -r j select-pane -D \; display-pane
+bind -r k select-pane -U \; display-pane
+bind -r l select-pane -R \; display-pane
+bind -r H resize-pane -L 5
+bind -r J resize-pane -D 5
+bind -r K resize-pane -U 5
+bind -r L resize-pane -R 5
+
+# improve window navigation
+bind -r C-h select-window -t :-
+bind -r C-l select-window -t :+
+
+# improve copy mode
+set-window-option -g mode-keys vi # navigate & search like in vim
+unbind [
+bind Escape copy-mode # use Esc, not [, to enter copy mode
+unbind ]
+bind p paste-buffer # make copy & paste vim-like
+bind-key -T copy-mode-vi 'v' send-keys -X begin-selection
+bind-key -T copy-mode-vi y send-keys -X copy-pipe "reattach-to-user-namespace pbcopy"
+unbind-key -T copy-mode-vi Enter
+bind-key -T copy-mode-vi Enter send-keys -X copy-pipe "reattach-to-user-namespace pbcopy"
+
+# enable mouse scrolling (config changed as of v2.1)
+#set-window-option -g mode-mouse on # config pre-v2.1
+set-option -g mouse on
+bind -n WheelUpPane   select-pane -t= \; copy-mode -e \; send-keys -M
+bind -n WheelDownPane select-pane -t= \;                 send-keys -M
+
+# improve status bar
+setw -g monitor-activity on # notify if activity in other windows
+set -g visual-activity on
+#set -g status-utf8 on # apparently not needed in latest version
+set -g status-position bottom
+set -g status-justify centre # center align window list
+set -g status-left "#[fg=yellow]#P: #[fg=default]#(echo #{pane_current_path} | tail -c 85)"
+set -g status-left-length 100
+set -g status-interval 5 # default is 15 seconds; update path quicker
+set -g status-right "[#[fg=yellow]#S#[fg=default]] #(echo $USER)@#h" # session name $ user@host
+
+# pbpaste and pbcopy won't work unless the reattach-to-user-namespace wrapper is used
+set -g default-command "reattach-to-user-namespace -l $SHELL"
+
+# plugins
+set -g @plugin 'tmux-plugins/tpm' # https://github.com/tmux-plugins/tpm
+set -g @plugin 'tmux-plugins/tmux-sensible'
+set -g @plugin 'tmux-plugins/tmux-resurrect' # https://github.com/tmux-plugins/tmux-resurrect
+set -g @plugin 'tmux-plugins/tmux-continuum' # https://github.com/tmux-plugins/tmux-continuum
+
+set -g @continuum-restore 'on'
+#set -g @continuum-boot 'on'
+#set -g @continuum-boot-options 'iterm'
+
+# use 256 colors
+set -g default-terminal "screen-256color"
+
+##################################################################
+# Append tmuxcolors-256.conf below #	(from https://github.com/seebi/tmux-colors-solarized) #	with my edits ##################################################################
+
+#### COLOUR (Solarized dark)
+
+# TMUX			SOLARIZED
+# black			Base02
+# brightblack	Base03
+# red			Red
+# brightred		Orange
+# green			Green
+# brightgreen	Base01
+# yellow		Yellow
+# brightyellow	Base00
+# blue			Blue
+# brightblue	Base0
+# magenta		Magenta
+# brightmagenta	Violet
+# cyan			Cyan
+# brightcyan	Base1
+# gray			Base2
+# brightgray	Base3
+
+# default statusbar colors
+set-option -g status-style bg=black,fg=default,default
+
+# default window title colors
+set-window-option -g window-status-style fg=default,bg=default,default
+
+# active window title colors
+set-window-option -g window-status-current-style fg=yellow,bg=default,default
+
+# pane border
+set-option -g pane-border-style fg=black,bg=default
+set-option -g pane-active-border-style fg=yellow,bg=default
+
+# message text
+set-option -g message-style bg=black,fg=yellow,default
+
+# pane number display
+set-option -g display-panes-active-colour yellow
+set-option -g display-panes-colour blue
+
+# clock
+set-window-option -g clock-mode-colour green
+
+# bell
+set-window-option -g window-status-bell-style fg=black,bg=red #fg=base02
+
+##################################################################
+
+# Initialize TMUX plugin manager & plugins
+run -b '~/.tmux/plugins/tpm/tpm'
+
+run-shell '~/.tmux/plugins/tmux-resurrect/resurrect.tmux'
+run-shell '~/.tmux/plugins/tmux-continuum/continuum.tmux'
