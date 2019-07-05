@@ -17,4 +17,6 @@
   - Install [Vundle](https://github.com/VundleVim/Vundle.vim)
   - Setup [ycm](https://github.com/Valloric/YouCompleteMe#installation)
   
-Don't forget to map caps lock to ctrl
+Also, don't forget to...
+- Map caps lock to ctrl
+- Change iterm2 theme to solarized dark (same for vscode)
