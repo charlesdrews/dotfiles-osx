@@ -26,15 +26,15 @@ Also, don't forget to...
   - Update settings.json to include:
     ```json
     {
-    "workbench.colorTheme": "Solarized Dark",
+      "workbench.colorTheme": "Solarized Dark",
 
-    "editor.rulers": [
-        80,
-        100
-    ],
+      "editor.rulers": [
+          80,
+         100
+      ],
 
-    "editor.minimap.enabled": false,
-    "editor.renderWhitespace": "none",
-    "workbench.sideBar.location": "left",
-}
-```
+      "editor.minimap.enabled": false,
+      "editor.renderWhitespace": "none",
+     "workbench.sideBar.location": "left",
+    }
+    ```
