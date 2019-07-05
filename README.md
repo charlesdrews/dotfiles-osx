@@ -22,7 +22,7 @@ Also, don't forget to...
 - Map caps lock to ctrl
 - Change iterm2 theme to solarized dark (same for vscode)
 - Update vscode:
-  - Add extensions: Vim, TSLint, markdownlin, jshint, ESLint, TSLint, Beautify, and Salesforce extensions
+  - Add extensions: Vim, TSLint, markdownlin, jshint, ESLint, TSLint, Beautify, and Salesforce Extension Pack
   - Update settings.json to include:
     ```json
     {
@@ -33,8 +33,9 @@ Also, don't forget to...
          100
       ],
 
-      "editor.minimap.enabled": false,
       "editor.renderWhitespace": "none",
       "workbench.sideBar.location": "left",
+
+      "salesforcedx-vscode-apex.java.home":"/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home"
     }
     ```
