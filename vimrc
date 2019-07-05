@@ -19,7 +19,7 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
 " Plugin 'suan/vim-instant-markdown'
-Plugin 'JamshedVesuna/vim-markdown-preview'
+" Plugin 'JamshedVesuna/vim-markdown-preview'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
