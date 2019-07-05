@@ -35,6 +35,6 @@ Also, don't forget to...
 
       "editor.minimap.enabled": false,
       "editor.renderWhitespace": "none",
-     "workbench.sideBar.location": "left",
+      "workbench.sideBar.location": "left",
     }
     ```
