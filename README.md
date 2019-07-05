@@ -9,10 +9,12 @@
   - `llvm`
   - `reattach-to-user-namespace`
   - `tmux`
+  - `macvim`, then run `ln -sf /usr/local/Cellar/macvim/8.1-156/bin/mvim /usr/local/bin/vim`
 - Copy .git-prompt.sh to $HOME from https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh
 - Symlink to these config files from $HOME
   - Prepend names w/ "."
 - Set up vim
-  - Install [MacVim](https://github.com/macvim-dev/macvim/releases)
-  - Symlink to `/Applications/MacVim.app/Contents/bin/mvim` as `/usr/local/bin/vim`
+  - Install [Vundle](https://github.com/VundleVim/Vundle.vim)
   - Setup [ycm](https://github.com/Valloric/YouCompleteMe#installation)
+  
+Don't forget to map caps lock to ctrl
