@@ -1,12 +1,12 @@
 # dotfiles-osx
 
 - Run `xcode-select --install` to install xcode cmd line tools
-- Set up [homebrew](https://docs.brew.sh/Installation.html), then install:
+- Set up [homebrew](https://docs.brew.sh/Installation.html), then `brew install`:
   - `coreutils`
   - `libevent`
   - `ncurses`
   - `cmake`
-  - `--with-toolchain llvm`
+  - `llvm`
   - `reattach-to-user-namespace`
 - Copy .git-prompt.sh to $HOME from https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh
 - Symlink to these config files from $HOME
