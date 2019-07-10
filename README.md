@@ -21,6 +21,7 @@
 Also, don't forget to...
 - Map caps lock to ctrl
 - Change iterm2 theme to solarized dark (same for vscode)
+- Install [tmux plugin manager](https://github.com/tmux-plugins/tpm): `git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`
 - Update vscode:
   - Add extensions: Vim, TSLint, markdownlin, jshint, ESLint, TSLint, Beautify, and Salesforce Extension Pack
   - Update settings.json to include:
