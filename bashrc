@@ -22,7 +22,7 @@ export GIT_PS1_SHOWCOLORHINTS=1		# colorize
 export GIT_PS1_SHOWUPSTREAM="auto"	# ahead/behind upstream >/<
 
 # Set PROMPT_COMMAND (in lieu of PS1 to get colors from __git_ps1)
-pre="\n"
+pre="\n\A "
 if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_CONNECTION" ] || \
 	[ -n "$SSH_TTY" ]; then
 	pre+="$red\u@\h:"
@@ -31,6 +31,6 @@ fi
 pre+="$base01\W$resetColor"
 #post="\\\$$resetColor "
 #post="➤$resetColor "
-post="\A➤$resetColor "
+post="➤$resetColor "
 format="(%s)"
 PROMPT_COMMAND='__git_ps1 "$pre" "$post" "$format"'
