@@ -30,6 +30,7 @@ fi
 #pre+="$blue\W$resetColor"
 pre+="$base01\W$resetColor"
 #post="\\\$$resetColor "
-post="➤$resetColor "
+#post="➤$resetColor "
+post="\A➤$resetColor "
 format="(%s)"
 PROMPT_COMMAND='__git_ps1 "$pre" "$post" "$format"'
