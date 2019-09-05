@@ -41,7 +41,7 @@ filetype plugin indent on    " required
 
 " Use the Solarized color scheme
 syntax enable
-set background=light
+set background=dark
 colorscheme solarized
 
 " Misc. options
