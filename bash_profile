@@ -22,3 +22,8 @@ if [ -z $TMUX ]
 then
 	tmux -2 attach -t "$USER" || tmux -2 new-session -s "$USER"
 fi
+
+# suppress the warning message that macOS has switched to zsh as the
+# default shell
+# https://www.addictivetips.com/mac-os/hide-default-interactive-shell-is-now-zsh-in-terminal-on-macos/
+export BASH_SILENCE_DEPRECATION_WARNING=1
