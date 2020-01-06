@@ -14,6 +14,8 @@
 - Copy .git-prompt.sh to $HOME from https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh
 - Symlink to these config files from $HOME
   - Prepend names w/ "."
+  - tmux.conf.2.9 -> .tmux.conf
+  - dircolors.256dark -> .dircolors
 - Set up vim
   - Install [Vundle](https://github.com/VundleVim/Vundle.vim)
   - Setup [YCM](https://github.com/Valloric/YouCompleteMe#installation)
