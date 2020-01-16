@@ -22,6 +22,8 @@
   
 Also, don't forget to...
 - Map caps lock to ctrl
+- Allow [key repeating](https://gist.github.com/lsd/1e1826907ab7e49c536a)
+    `defaults write -g ApplePressAndHoldEnabled -bool false`
 - Change iterm2 theme to solarized dark (same for vscode)
 - Install [tmux plugin manager](https://github.com/tmux-plugins/tpm): `git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`
 - Update vscode:
@@ -42,5 +44,3 @@ Also, don't forget to...
       "salesforcedx-vscode-apex.java.home":"/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home"
     }
     ```
-  - Allow [key repeating](https://gist.github.com/lsd/1e1826907ab7e49c536a)
-    `defaults write -g ApplePressAndHoldEnabled -bool false`
