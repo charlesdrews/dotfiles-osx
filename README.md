@@ -42,5 +42,5 @@ Also, don't forget to...
       "salesforcedx-vscode-apex.java.home":"/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home"
     }
     ```
-  - Allow [key repeating](https://stackoverflow.com/a/44010683)
-    `defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false`
+  - Allow [key repeating](https://gist.github.com/lsd/1e1826907ab7e49c536a)
+    `defaults write -g ApplePressAndHoldEnabled -bool false`
