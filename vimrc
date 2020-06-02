@@ -52,6 +52,12 @@ set visualbell         " flash screen rather than sound beep
 set pastetoggle=<F12>  " paste from other apps w/o indent problems
 set backspace=indent,eol,start	"allow backspace over anything in insert mode
 set scrolloff=1
+nnoremap <c-m> <c-v>   " use ctrl-m to enter visual block mode (not ctrl-v)
+if $TERM_PROGRAM =~ "iTerm"
+    let &t_SI="\033[5 q" " start insert mode - line cursor
+    let &t_EI="\033[1 q" " end insert mode - block cursor
+endif
+set timeoutlen=1000 ttimeoutlen=10 " reduce wait time after hitting esc
 
 " Search options
 set hlsearch           " highlight search results
